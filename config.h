@@ -42,10 +42,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile }, /* first entry is default */
-	{ "HHH",      horizgrid },
-	{ "[3]",      tcl },
-	{ "[M]",      monocle },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "",      horizgrid },
+	{ "[]",      tcl },
+	{ "",      monocle },
+	{ "",      NULL },    /* no layout function means floating behavior */
 };
 
 #include <X11/XF86keysym.h>
