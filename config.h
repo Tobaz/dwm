@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "" , "  ", "", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "" , "", "", ""  };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -48,6 +48,7 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 };
 
+#include <X11/XF86keysym.h>
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
@@ -93,7 +94,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e ranger ~/") },
 	{ MODKEY|ShiftMask,             XK_x,      quit,           {0} },
+	{ 0,                            XF86XK_AudioRaiseVolume,      spawn,          SHCMD("amixer set Master 5%+") },
+	{ 0,                            XF86XK_AudioLowerVolume,      spawn,          SHCMD("amixer set Master 5%-") },
+	{ 0,                            XF86XK_AudioMute,             spawn,          SHCMD("pulsemixer --toggle-mute") },
 //	{ MODKEY,                       XK_m,      spawn,          SHCMD("st -e ncmpcpp") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
