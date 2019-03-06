@@ -1,4 +1,6 @@
 #!/bin/bash
+compton &
+~/.fehbg &
 while true; do
 	#Log stderror to file
 	dwm 2> ~/.dwm.log
