@@ -11,7 +11,7 @@ static const char dmenufont[]       = "mono:size=12";
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#000000";
 static const char col_gray3[]       = "#93a1a1";
-static const char col_gray4[]       = "#000000";
+static const char col_gray4[]       = "#dddddd";
 static const char col_cyan[]        = "#330033";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -93,7 +93,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("qutebrowser") },
+	{ MODKEY,                       XK_w,      spawn,          SHCMD("chromium") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e ranger ~/") },
 	{ MODKEY|ShiftMask,             XK_x,      quit,           {0} },
 	{ 0,                            XF86XK_AudioRaiseVolume,      spawn,          SHCMD("amixer set Master 5%+") },
