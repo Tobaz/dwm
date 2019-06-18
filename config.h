@@ -28,8 +28,10 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
+	
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "NOTFirefox",  NULL,       NULL,       1 << 1,       0,           -1 },
+	
 };
 
 /* layout(s) */
@@ -93,7 +95,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("chromium") },
+	{ MODKEY,                       XK_w,      spawn,          SHCMD("firefox") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("st -e ranger ~/") },
 	{ MODKEY|ShiftMask,             XK_x,      quit,           {0} },
 	{ 0,                            XF86XK_AudioRaiseVolume,      spawn,          SHCMD("amixer set Master 5%+") },
